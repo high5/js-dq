@@ -7,6 +7,7 @@ var CHANGE_EVENT = 'change';
 
 var _battleState = {};
 var _enemyList = {};
+var _deckList = {};
 
 var BattleStore = assign({}, EventEmitter.prototype, {
 
@@ -16,34 +17,66 @@ var BattleStore = assign({}, EventEmitter.prototype, {
 
   getEnemyList: function() {
     _enemyList = {
-      0:{
-        "count":123,
-        "name":"テスト１",
-        "result":false
-      },
       1:{
-        "count":456,
+        "enemyId":1,
+        "name":"テスト１",
+        "lifePer":65
+      },
+      2:{
+        "enemyId":2,
         "name":"テスト２",
-        "result":true
+        "lifePer":98
+      },
+      3:{
+        "enemyId":3,
+        "name":"テスト２",
+        "lifePer":70
       }
     };
-
     return _enemyList;
+  },
+
+  getDeckList: function() {
+    _deckList = {
+      1:{
+        "cardId":1,
+        "name":"テスト１",
+        "lifePer":65,
+        "skillPer":20
+      },
+      2:{
+        "cardId":2,
+        "name":"テスト２",
+        "lifePer":98,
+        "skillPer":38
+      },
+      3:{
+        "cardId":3,
+        "name":"テスト3",
+        "lifePer":70,
+        "skillPer":45
+      },
+      4:{
+        "cardId":4,
+        "name":"テスト１",
+        "lifePer":65,
+        "skillPer":20
+      },
+      5:{
+        "cardId":5,
+        "name":"テスト２",
+        "lifePer":98,
+        "skillPer":38
+      },
+      6:{
+        "cardId":6,
+        "name":"テスト3",
+        "lifePer":70,
+        "skillPer":45
+      }
+    };
+    return _deckList;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });

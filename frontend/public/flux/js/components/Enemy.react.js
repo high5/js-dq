@@ -1,6 +1,6 @@
 var React = require('react');
 var BattleStore = require('../stores/BattleStore');
-
+var EnemyInfo = require('./EnemyInfo.react');
 
 
 var Enemy = React.createClass({
@@ -17,9 +17,6 @@ var Enemy = React.createClass({
 
     //console.log(this.props.enemyList);
 
-    var enemyList = this.state;
-
-    console.log(enemyList);
 
 
     /*
@@ -35,30 +32,20 @@ var Enemy = React.createClass({
     }
     */
 
+    var enemyList = this.state;
 
+    var enemyInfoList = [];
 
-    var meterPerStyle = {
-      width: '50%'
-    };
-
-
+    for (var key in enemyList) {
+      //enemyInfoList.push(<EnemyInfo key={key} todo={allTodos[key]} />);
+      enemyInfoList.push(<EnemyInfo  key={key} enemy={enemyList[key]} />);
+    }
 
     return (
       <div id="enemy" className="enemy">
-      <div id="enemy-list">
-        <table className="enemy-table">
-          <tr><td><img id="enemy-img-1" className="enemy-img" src="/images/enemy/1.png"   /></td></tr>
-          <tr><td className="enemy-meter-td"><div id="enemy-life-meter-container-1" className="meter red nostripes"><span id="enemy-life-meter-1" style={meterPerStyle}></span></div></td></tr>
-        </table>
-        <table className="enemy-table">
-          <tr><td><img id="enemy-img-1" className="enemy-img" src="/images/enemy/1.png"   /></td></tr>
-          <tr><td className="enemy-meter-td"><div id="enemy-life-meter-container-1" className="meter red nostripes"><span id="enemy-life-meter-1" style={meterPerStyle}></span></div></td></tr>
-        </table>
-        <table className="enemy-table">
-          <tr><td><img id="enemy-img-1" className="enemy-img" src="/images/enemy/1.png"  /></td></tr>
-          <tr><td className="enemy-meter-td"><div id="enemy-life-meter-container-1" className="meter red nostripes"><span id="enemy-life-meter-1" style={meterPerStyle}></span></div></td></tr>
-        </table>
-      </div>
+        <div id="enemy-list">
+          {enemyInfoList}
+        </div>
       </div>
     );
   },
