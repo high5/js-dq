@@ -1,0 +1,622 @@
+
+/************************************************************
+clearfix
+************************************************************/
+.clearfix {
+    width:100%;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/************************************************************
+contents
+************************************************************/
+
+
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,img { margin:0; padding:0; border:0px;}
+        li{ list-style-type: none;}
+        .clear { clear:both;}
+        .none { display:none;}
+
+        #container {
+            background-color: #D3CBA6;
+            border: 1px solid #999999;
+            box-shadow: 0 0 5px #DDB331;
+            display: block;
+            margin: 0 auto;
+            overflow: hidden;
+            width: 318px;
+        }
+
+        #back {
+            height:250px;
+            background-image: -webkit-gradient(
+                linear,
+                left top,
+                left bottom,
+                color-stop(0.0, #000000),
+                color-stop(1.0, #333300)
+            );
+            position:relative;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }
+
+        #frame {
+            margin:0px auto;
+            width:320px;
+            height:250px;
+            position:relative;
+            overflow:hidden;
+            background:url(/img);
+        }
+
+
+
+.design-bg-1 {
+    background: url("/img") repeat scroll 0 0 transparent;
+}
+
+.design-bg-2 {
+    background: url("/img") repeat scroll 0 0 transparent;
+}
+
+
+
+
+
+#back {
+    height:204px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.0, #000000),
+        color-stop(1.0, #333300)
+    );
+    position:relative;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+#frame {
+    margin:0px auto;
+    width:320px;
+    height:204px;
+    position:relative;
+    overflow:hidden;
+    background:url(/img/battle/frame);
+}
+
+#loader {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 1002;
+    display: none;
+    background-size:contain;
+}
+
+#story-container {
+    line-height: 16px;
+    height: 45px;
+    width: 289px;
+    z-index: 100;
+    background-color: black;
+    color: #fff;
+    border: #fff solid 2px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-right: 0px;
+    padding: 3px;
+    text-align: left;
+}
+
+#enemy-list {
+    position: absolute;
+    height: 90px;
+    width: 289px;
+    top: 20px;
+    left: 10px;
+    z-index: 100;
+    color: #777;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 3px;
+    text-align: left;
+}
+
+#deck-list {
+    width: 100%;
+    height: 96px;
+    text-align: center;
+}
+
+.deck-defeated-img {
+    opacity: 0.4;
+}
+
+.gray-out-img {
+    opacity: 0.4;
+}
+
+.clear-img {
+    opacity: 0;
+}
+
+.effect-deck-skill {
+    background:url(/img/battle/effect/deck);
+    width:49px;
+    height:49px;
+    z-index: 1002;
+    position:absolute;
+}
+
+.enemy-damage-display {
+    width:92px;
+    height:132px;
+    line-height: 132px;
+    font-size: 22px;
+    font-weight: bold;
+    color: red;
+    z-index: 1003;
+    position:absolute;
+    text-shadow:
+        2px 0px 4px rgba(255,255,255,0.5),
+        0px 2px 4px rgba(255,255,255,0.5),
+        -2px 0px 4px rgba(255,255,255,0.5),
+        0px -2px 4px rgba(255,255,255,0.5);
+}
+
+.deck-damage-display {
+    width:49px;
+    height:49px;
+    font-weight: bold;
+    color: red;
+    z-index: 1002;
+    position:absolute;
+    text-shadow:
+        2px 0px 4px rgba(255,255,255,0.5),
+        0px 2px 4px rgba(255,255,255,0.5),
+        -2px 0px 4px rgba(255,255,255,0.5),
+        0px -2px 4px rgba(255,255,255,0.5);
+}
+
+.effect-deck-damage {
+    background:url(/img/battle);
+    background-size:contain;
+    position:absolute;
+    z-index: 1001;
+    width:49px;
+    height:49px;
+}
+
+.deck-defeated {
+    background:url(/img)
+    background-size:contain;
+    position:absolute;
+    width:49px;
+    height:49px;
+    z-index: 1001;
+}
+
+.deck-not-exists {
+    background:url(/img);
+    background-size:contain;
+    position:absolute;
+    width:49px;
+    height:49px;
+    z-index: 1003;
+}
+
+#command-container {
+    width: 100%;
+    height: 65px;
+    background-color: #dddeee;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#command-skill-view {
+    /*
+    margin-left:2px;
+    */
+    width: 312px;
+    height: 70px;
+    margin: 0px 2px 2px 0px;
+    border: #9C9C9C solid 2px;
+    border-radius: 5px;
+    /* IE10 Consumer Preview */
+    background-image: -ms-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #BFBFBF 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #BFBFBF 100%);
+    /* Opera */
+    background-image: -o-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #BFBFBF 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #FFFFFF), color-stop(1, #BFBFBF));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #BFBFBF 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background-image: radial-gradient(ellipse farthest-corner at center top, #FFFFFF 0%, #BFBFBF 100%);
+    z-index: 1000;
+    display: none;
+    position:absolute;
+    text-align: lfet;
+}
+
+.command-image {
+    height: 48px;
+    width:92px;
+}
+
+
+/************************************************************
+meter
+************************************************************/
+
+.meter {
+    height: 12px;  /* Can be anything */
+    width: 60px;
+    position: relative;
+    margin: 4px 0 2px 0; /* Just for demo spacing */
+    background: #555;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0px 0px 0px 0px;
+}
+
+.meter > span {
+    display: block;
+    height: 100%;
+    width: 60px;
+
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(43,194,83);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(43,194,83)),
+        color-stop(1, rgb(84,240,84))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(43,194,83) 37%,
+        rgb(84,240,84) 69%
+    );
+    -webkit-box-shadow:
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    -moz-box-shadow:
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    box-shadow:
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.meter > span:after, .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image:
+        -webkit-gradient(linear, 0 0, 100% 100%,
+        color-stop(.25, rgba(255, 255, 255, .2)),
+        color-stop(.25, transparent), color-stop(.5, transparent),
+        color-stop(.5, rgba(255, 255, 255, .2)),
+        color-stop(.75, rgba(255, 255, 255, .2)),
+        color-stop(.75, transparent), to(transparent)
+        );
+    background-image:
+        -moz-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, .2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%,
+            transparent 75%,
+            transparent
+        );
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+
+.meter-deck {
+    height: 12px;  /* Can be anything */
+    width: 49px;
+    position: relative;
+    margin: 4px 0 2px 0; /* Just for demo spacing */
+    background: #555;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0px 0px 0px 0px;
+}
+
+.meter-deck > span {
+    display: block;
+    height: 100%;
+    width: 49px;
+
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(43,194,83);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(43,194,83)),
+        color-stop(1, rgb(84,240,84))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(43,194,83) 37%,
+        rgb(84,240,84) 69%
+    );
+    -webkit-box-shadow:
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    -moz-box-shadow:
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    box-shadow:
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.meter-deck > span:after, .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image:
+        -webkit-gradient(linear, 0 0, 100% 100%,
+        color-stop(.25, rgba(255, 255, 255, .2)),
+        color-stop(.25, transparent), color-stop(.5, transparent),
+        color-stop(.5, rgba(255, 255, 255, .2)),
+        color-stop(.75, rgba(255, 255, 255, .2)),
+        color-stop(.75, transparent), to(transparent)
+        );
+    background-image:
+        -moz-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, .2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%,
+            transparent 75%,
+            transparent
+        );
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+
+.animate > span:after {
+    display: none;
+}
+
+@-webkit-keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+.green > span {
+    background-color: #6FFE56;
+    background-image: -moz-linear-gradient(top, #A6E22E, #6FFE56);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #A6E22E),color-stop(1, #6FFE56));
+    background-image: -webkit-linear-gradient(#A6E22E, #6FFE56);
+}
+
+.red > span {
+    background-color: #f0a3a3;
+    background-image: -moz-linear-gradient(top, #f0a3a3, #f42323);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f0a3a3),color-stop(1, #f42323));
+    background-image: -webkit-linear-gradient(#f0a3a3, #f42323);
+}
+
+.blue > span {
+    background-color: #415CB6;
+    background-image: -moz-linear-gradient(top, #415CB6, #96A4FE);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #415CB6),color-stop(1, #96A4FE));
+    background-image: -webkit-linear-gradient(#415CB6, #96A4FE);
+}
+
+
+.nostripes > span > span, .nostripes > span:after {
+    -webkit-animation: none;
+    background-image: none;
+}
+
+
+/************************************************************
+effect
+************************************************************/
+.shadow-yerrow{
+    -webkit-box-shadow: 0 0 5px 2px #ffd34f;
+}
+
+.shadow-blue{
+    -webkit-box-shadow: 0 0 5px 3px #245DDB;
+}
+
+
+.shadow-purple{
+    -webkit-box-shadow: 0 0 5px 2px #5C3DA6;
+}
+
+.shadow-pink{
+    -webkit-box-shadow: 0 0 5px 2px #ff2299;
+}
+
+.shadow-red{
+    -webkit-box-shadow: 0 0 5px 2px #F61030;
+}
+
+.shadow-green{
+    -webkit-box-shadow: 0 0 5px 2px #2f8c37;
+}
+
+
+
+/*** pulse start */
+@-webkit-keyframes pulse {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+
+@-webkit-keyframes pulse-2 {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+
+@-webkit-keyframes pulse-3 {
+    from { background-color: #ff3377; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #ff3388;  }
+    to { background-color: #ff4477; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+.blinking-1{
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-delay: 2s;
+}
+
+.blinking-2{
+    -webkit-animation-name: pulse-2;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-delay: 2s;
+}
+
+
+.blinking-3 {
+    -webkit-animation-name: pulse-3;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:ease-in-out;
+}
+
+.blinking-5{
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-delay: 0s;
+}
+
+.blinking-6{
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 0.9s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function: all 1s cubic-bezier(.89, .14, .11, .98);
+    -webkit-animation-direction: alternate;
+    -webkit-animation-delay: 0s;
+}
+
+.blinking-deck-attack{
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-delay: 0s;
+}
+
+/*** pulse end */
+
+
+
+
+
+
+
+
+
+
+
+
+

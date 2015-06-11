@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>battle</title>
+    <!--
+    <link rel="stylesheet" href="todomvc-common/base.css">
+    -->
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body>
+    <section id="app">
+      <div id="field" class="field-375-667">
+        <div id="menu" class="menu">
+          menu
+        </div>
+        <div id="enemy" class="enemy">
+            <div id="enemy-list">
+                <table class="enemy-table">
+                    <tr><td><img id="enemy-img-1" class="enemy-img" src="/images/enemy/1.png" alt="enemy" ></td></tr>
+                    <tr><td class="enemy-meter-td"><div id="enemy-life-meter-container-1" class="meter red nostripes"><span id="enemy-life-meter-1" style="width: 3%"></span></div></td></tr>
+                </table>
+                <table class="enemy-table">
+                    <tr><td><img id="enemy-img-1" class="enemy-img" src="/images/enemy/2.png" alt="enemy" ></td></tr>
+                    <tr><td class="enemy-meter-td"><div id="enemy-life-meter-container-1" class="meter red nostripes"><span id="enemy-life-meter-1" style="width: 3%"></span></div></td></tr>
+                </table>
+                <table class="enemy-table">
+                    <tr><td><img id="enemy-img-1" class="enemy-img" src="/images/enemy/3.png" alt="enemy" ></td></tr>
+                    <tr><td class="enemy-meter-td"><div id="enemy-life-meter-container-1" class="meter red nostripes"><span id="enemy-life-meter-1" style="width: 30%"></span></div></td></tr>
+                </table>
+            </div>
+        </div>
+        <div id="story" class="story-375-667">
+            敵Aの攻撃<br />
+            32のダメージを食らった
+        </div>
+      </div>
+      <div id="deck"  style="">
+          <table class="deck-table">
+              <tr>
+                  <td style=""><img id="deck-img-1" src="/images/deck/1.png" alt="deck" class="deck-img"></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-life-meter-container-1" class="meter-deck green nostripes"><span id="deck-life-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-skill-point-meter-container-1" class="meter-deck blue nostripes"><span id="deck-skill-point-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+          </table>
+          <table class="deck-table">
+              <tr>
+                  <td style=""><img id="deck-img-1" src="/images/deck/2.png" alt="deck" class="deck-img"></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-life-meter-container-1" class="meter-deck green nostripes"><span id="deck-life-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-skill-point-meter-container-1" class="meter-deck blue nostripes"><span id="deck-skill-point-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+          </table>
+          <table class="deck-table">
+              <tr>
+                  <td style=""><img id="deck-img-1" src="/images/deck/1.png" alt="deck" class="deck-img"></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-life-meter-container-1" class="meter-deck green nostripes"><span id="deck-life-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-skill-point-meter-container-1" class="meter-deck blue nostripes"><span id="deck-skill-point-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+          </table>
+          <table class="deck-table">
+              <tr>
+                  <td style=""><img id="deck-img-1" src="/images/deck/1.png" alt="deck" class="deck-img"></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-life-meter-container-1" class="meter-deck green nostripes"><span id="deck-life-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-skill-point-meter-container-1" class="meter-deck blue nostripes"><span id="deck-skill-point-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+          </table>
+          <table class="deck-table">
+              <tr>
+                  <td style=""><img id="deck-img-1" src="/images/deck/1.png" alt="deck" class="deck-img"></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-life-meter-container-1" class="meter-deck green nostripes"><span id="deck-life-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-skill-point-meter-container-1" class="meter-deck blue nostripes"><span id="deck-skill-point-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+          </table>
+          <table class="deck-table">
+              <tr>
+                  <td style=""><img id="deck-img-1" src="/images/deck/1.png" alt="deck" class="deck-img"></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-life-meter-container-1" class="meter-deck green nostripes"><span id="deck-life-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+              <tr>
+                  <td><div id="deck-skill-point-meter-container-1" class="meter-deck blue nostripes"><span id="deck-skill-point-meter-1" style="width: 10%"></span></div></td>
+              </tr>
+          </table>
+      </div>
+      <div id="command">
+          <img id="button-img-1" src="/images/button/sample.png" alt="deck" class="command-button-img"><img id="button-img-2" src="/images/button/sample.png" alt="deck" class="command-button-img"><img id="button-img-3" src="/images/button/sample.png" alt="deck" class="command-button-img">
+      </div>
+    </section>
+    <!--
+    <script src="js/bundle.js"></script>
+    -->
+  </body>
+</html>
