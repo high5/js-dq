@@ -6,7 +6,7 @@
 //var Deck  = require('./Deck.react');
 var React = require('react');
 var Field = require('./Field.react');
-var Deck = require('./Deck.react');
+var DeckList = require('./DeckList.react');
 var Command = require('./Command.react');
 
 
@@ -96,7 +96,7 @@ var BattleApp = React.createClass({
     return (
       <div>
         <Field  />
-        <Deck />
+        <DeckList />
         <Command />
       </div>
     );

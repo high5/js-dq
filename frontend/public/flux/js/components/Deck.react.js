@@ -1,12 +1,15 @@
+/**
+ * Created on 15/06/11.
+ */
+/**
+ * Created on 15/06/10.
+ */
 var React = require('react');
-var BattleStore = require('../stores/BattleStore');
-var DeckInfo = require('./DeckInfo.react');
 
-
-var Deck = React.createClass({
+var DeckInfo = React.createClass({
 
   getInitialState: function() {
-    return BattleStore.getDeckList();
+    return null;
   },
 
   /**
@@ -14,18 +17,28 @@ var Deck = React.createClass({
    */
   render: function() {
 
-    var deckList = this.state;
+    var imgPath = "/images/deck/" + this.props.info.charaId  + ".png"
 
-    var deckInfoList = [];
+    var lifeMeterPerStyle = {
+      width: this.props.info.lifePer + '%'
+    };
 
-    for (var key in deckList) {
-      deckInfoList.push(<DeckInfo  key={key} info={deckList[key]} />);
-    }
+    var skillMeterPerStyle = {
+      width: this.props.info.skillPer + '%'
+    };
 
     return (
-      <div id="deck">
-        {deckInfoList}
-      </div>
+      <table className="deck-table" >
+        <tr>
+          <td><img id="deck-img-1" src={imgPath} alt="deck" className="deck-img" /></td>
+        </tr>
+        <tr>
+          <td><div id="deck-life-meter-container-1" className="meter-deck green nostripes"><span id="deck-life-meter-1" style={lifeMeterPerStyle}></span></div></td>
+        </tr>
+        <tr>
+          <td><div id="deck-skill-point-meter-container-1" className="meter-deck blue nostripes"><span id="deck-skill-point-meter-1" style={skillMeterPerStyle}></span></div></td>
+        </tr>
+      </table>
     );
   },
 
@@ -33,6 +46,10 @@ var Deck = React.createClass({
 
   }
 
+
+
+
 });
 
-module.exports = Deck;
+module.exports = DeckInfo;
+

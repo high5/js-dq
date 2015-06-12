@@ -1,8 +1,8 @@
 var React = require('react');
-var Enemy = require('./Enemy.react');
 var Menu = require('./Menu.react');
-var Enemy = require('./Enemy.react');
+var EnemyList = require('./EnemyList.react');
 var Story = require('./Story.react');
+
 
 
 var Field = React.createClass({
@@ -18,7 +18,7 @@ var Field = React.createClass({
     return (
       <div id="field" className="field-375-667">
         <Menu  />
-        <Enemy  />
+        <EnemyList  />
         <Story  />
       </div>
       );

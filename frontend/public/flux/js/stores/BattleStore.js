@@ -16,65 +16,74 @@ var BattleStore = assign({}, EventEmitter.prototype, {
   },
 
   getEnemyList: function() {
-    _enemyList = {
-      1:{
+    _enemyList = [
+      {
+        "pos":1,
         "charaId":1,
         "name":"テスト１",
         "lifePer":65
       },
-      2:{
+      {
+        "pos":2,
         "charaId":2,
         "name":"テスト２",
         "lifePer":98
       },
-      3:{
+      {
+        "pos":3,
         "charaId":3,
         "name":"テスト２",
         "lifePer":70
       }
-    };
+    ];
     return _enemyList;
   },
 
   getDeckList: function() {
-    _deckList = {
-      1:{
+    _deckList = [
+      {
+        "pos":1,
         "charaId":1,
         "name":"テスト１",
         "lifePer":65,
         "skillPer":20
       },
-      2:{
+      {
+        "pos":2,
         "charaId":2,
         "name":"テスト２",
         "lifePer":98,
         "skillPer":38
       },
-      3:{
+      {
+        "pos":3,
         "charaId":3,
         "name":"テスト3",
         "lifePer":70,
         "skillPer":45
       },
-      4:{
+      {
+        "pos":4,
         "charaId":4,
         "name":"テスト１",
         "lifePer":65,
         "skillPer":20
       },
-      5:{
+      {
+        "pos":5,
         "charaId":5,
         "name":"テスト２",
         "lifePer":98,
         "skillPer":38
       },
-      6:{
+      {
+        "pos":6,
         "charaId":6,
         "name":"テスト3",
         "lifePer":70,
         "skillPer":45
       }
-    };
+    ];
     return _deckList;
   }
 
