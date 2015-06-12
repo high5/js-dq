@@ -28,7 +28,7 @@ var DeckInfo = React.createClass({
     };
 
     return (
-      <table className="deck-table">
+      <table className="deck-table" >
         <tr>
           <td><img id="deck-img-1" src={imgPath} alt="deck" className="deck-img" /></td>
         </tr>
@@ -45,6 +45,9 @@ var DeckInfo = React.createClass({
   _onSave: function(text) {
 
   }
+
+
+
 
 });
 

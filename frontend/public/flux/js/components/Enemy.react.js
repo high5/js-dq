@@ -36,6 +36,7 @@ var Enemy = React.createClass({
 
   }
 
+
 });
 
 module.exports = Enemy;

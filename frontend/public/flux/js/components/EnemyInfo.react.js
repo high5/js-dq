@@ -23,12 +23,16 @@ var EnemyInfo = React.createClass({
 
     var imgPath = "/images/enemy/" + this.props.info.charaId  + ".png"
 
+
+    console.log( this.props);
+    console.log( this.props.info.name);
+
     var meterPerStyle = {
       width: this.props.info.lifePer + '%'
     };
 
     return (
-      <table className="enemy-table">
+      <table className="enemy-table" onClick={this._onClick}>
         <tr><td><img id={"enemy-img-" + this.props.info.key} className="enemy-img" src={imgPath}   /></td></tr>
         <tr><td className="enemy-meter-td"><div id={"enemy-life-meter-container-" + this.props.info.key} className="meter red nostripes"><span id={"enemy-life-meter-" + this.props.info.key} style={meterPerStyle}></span></div></td></tr>
       </table>
@@ -37,7 +41,14 @@ var EnemyInfo = React.createClass({
 
   _onSave: function(text) {
 
+  },
+
+
+  _onClick: function(event) {
+    console.log(event.target);
+    console.log('DeckInfo_onClick');
   }
+
 
 });
 
