@@ -15,30 +15,12 @@ var Enemy = React.createClass({
    */
   render: function() {
 
-    //console.log(this.props.enemyList);
-
-
-
-    /*
-    var enemyList = this.props.enemyList;
-
-    for (var key in enemyList) {
-
-
-      console.log(enemyList[key].name);
-
-
-      //todos.push(<TodoItem key={key} todo={allTodos[key]} />);
-    }
-    */
-
     var enemyList = this.state;
 
     var enemyInfoList = [];
 
     for (var key in enemyList) {
-      //enemyInfoList.push(<EnemyInfo key={key} todo={allTodos[key]} />);
-      enemyInfoList.push(<EnemyInfo  key={key} enemy={enemyList[key]} />);
+      enemyInfoList.push(<EnemyInfo  key={key} info={enemyList[key]} />);
     }
 
     return (
