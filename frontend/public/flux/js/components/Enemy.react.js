@@ -5,6 +5,7 @@
  * Created on 15/06/10.
  */
 var React = require('react');
+var BattleActions = require('../actions/BattleActions');
 
 var Enemy = React.createClass({
 
@@ -44,8 +45,11 @@ var Enemy = React.createClass({
 
 
   _onClick: function(event) {
-    console.log(event.target);
-    console.log('DeckInfo_onClick');
+
+    BattleActions.executeDeckAttack();
+
+    //console.log(event.target);
+    //console.log('enemy._onClick');
   }
 
 

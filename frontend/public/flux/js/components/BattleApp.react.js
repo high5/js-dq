@@ -5,7 +5,10 @@
 //var Field = require('./Field.react');
 //var Deck  = require('./Deck.react');
 var React = require('react');
-var Field = require('./Field.react');
+//var Field = require('./Field.react');
+var Menu = require('./Menu.react');
+var EnemyList = require('./EnemyList.react');
+var Story = require('./Story.react');
 var DeckList = require('./DeckList.react');
 var Command = require('./Command.react');
 
@@ -19,7 +22,9 @@ var velocity = require('velocity-animate');
 
 function getBattleState() {
   return {
-    enemyList: BattleStore.getEnemyList()
+    enemyList: BattleStore.getEnemyList(),
+    deckList: BattleStore.getDeckList(),
+    test: "hoge"
   };
 }
 
@@ -76,13 +81,10 @@ var BattleApp = React.createClass({
   },
 
   componentDidMount: function() {
-
+    //this._onChange();
   },
 
   componentWillUnmount: function() {
-
-
-
 
 
   },
@@ -95,7 +97,12 @@ var BattleApp = React.createClass({
   render: function() {
     return (
       <div>
-        <Field  />
+        {this.state.test}
+        <div id="field" className="field-375-667">
+          <Menu  />
+          <EnemyList  enemyList={this.state.enemyList} />
+          <Story />
+        </div>
         <DeckList />
         <Command />
       </div>
@@ -105,7 +112,15 @@ var BattleApp = React.createClass({
   /**
    */
   _onChange: function() {
-    this.setState();
+    /*
+    console.log("BattleApp._onChange");
+    this.setState(
+      {
+        test:"mogemoge",
+        enemyList: BattleStore.getEnemyList2()
+      }
+    );
+    */
   }
 
 });

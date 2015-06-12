@@ -19,7 +19,7 @@ var BattleStore = assign({}, EventEmitter.prototype, {
     _enemyList = [
       {
         "pos":1,
-        "charaId":1,
+        "charaId":3,
         "name":"テスト１",
         "lifePer":65
       },
@@ -38,6 +38,32 @@ var BattleStore = assign({}, EventEmitter.prototype, {
     ];
     return _enemyList;
   },
+
+  getEnemyList2: function() {
+    _enemyList = [
+      {
+        "pos":1,
+        "charaId":3,
+        "name":"テスト１",
+        "lifePer":65
+      },
+      {
+        "pos":2,
+        "charaId":3,
+        "name":"テスト２",
+        "lifePer":98
+      },
+      {
+        "pos":3,
+        "charaId":3,
+        "name":"テスト２",
+        "lifePer":70
+      }
+    ];
+    return _enemyList;
+  },
+
+
 
   getDeckList: function() {
     _deckList = [
@@ -85,6 +111,24 @@ var BattleStore = assign({}, EventEmitter.prototype, {
       }
     ];
     return _deckList;
+  },
+
+  emitChange: function() {
+    this.emit(CHANGE_EVENT);
+  },
+
+  /**
+   * @param {function} callback
+   */
+  addChangeListener: function(callback) {
+    this.on(CHANGE_EVENT, callback);
+  },
+
+  /**
+   * @param {function} callback
+   */
+  removeChangeListener: function(callback) {
+    this.removeListener(CHANGE_EVENT, callback);
   }
 
 
@@ -92,6 +136,17 @@ var BattleStore = assign({}, EventEmitter.prototype, {
 
 // Register callback to handle all updates
 AppDispatcher.register(function(action) {
+  //var text;
+
+  switch(action.actionType) {
+    case BattleConstants.BATTLE_DECK_ATTACK:
+      BattleStore.emitChange();
+      break;
+    default:
+    // no op
+  }
+
+
 });
 
 module.exports = BattleStore;

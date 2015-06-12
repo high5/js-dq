@@ -7,10 +7,17 @@ var EnemyList = React.createClass({
 
 
   getInitialState: function() {
-    return {
-      enemyList: BattleStore.getEnemyList()
-    };
 
+    console.log("EnemyList getInitialState");
+
+
+
+    return {enemyList: this.props.enemyList};
+
+  },
+
+  componentDidMount: function() {
+    BattleStore.addChangeListener(this._onChange);
   },
 
   /**
@@ -47,10 +54,12 @@ var EnemyList = React.createClass({
     );
   },
 
-  _onSave: function(text) {
-
+  /**
+   * Event handler for 'change' events coming from the TodoStore
+   */
+  _onChange: function() {
+    this.setState({enemyList: BattleStore.getEnemyList2()});
   }
-
 
 });
 
