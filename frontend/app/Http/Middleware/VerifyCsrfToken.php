@@ -14,7 +14,7 @@ class VerifyCsrfToken extends BaseVerifier {
 	 */
 	public function handle($request, Closure $next)
 	{
-        //csrf token off  for todomvc test
+        //csrf token off  for js-dq
         return $next($request);
 
 		return parent::handle($request, $next);
