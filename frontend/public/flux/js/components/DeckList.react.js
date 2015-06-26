@@ -6,9 +6,16 @@ var Deck = require('./Deck.react');
 var DeckList = React.createClass({
 
   getInitialState: function() {
+    return {deckList: this.props.deckList};
+    /*
     return {
       deckList: BattleStore.getDeckList()
     };
+    */
+  },
+
+  componentDidMount: function() {
+    BattleStore.addChangeListener(this._onChange);
   },
 
   /**
@@ -27,8 +34,11 @@ var DeckList = React.createClass({
     );
   },
 
-  _onSave: function(text) {
-
+  /**
+   * Event handler for 'change' events coming from the TodoStore
+   */
+  _onChange: function() {
+    this.setState({deckList: BattleStore.getDeckList2()});
   }
 
 });

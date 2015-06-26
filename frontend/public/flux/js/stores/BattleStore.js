@@ -51,7 +51,7 @@ var BattleStore = assign({}, EventEmitter.prototype, {
         "pos":2,
         "charaId":3,
         "name":"テスト２",
-        "lifePer":98
+        "lifePer":30
       },
       {
         "pos":3,
@@ -87,6 +87,54 @@ var BattleStore = assign({}, EventEmitter.prototype, {
         "name":"テスト3",
         "lifePer":70,
         "skillPer":45
+      },
+      {
+        "pos":4,
+        "charaId":4,
+        "name":"テスト１",
+        "lifePer":65,
+        "skillPer":20
+      },
+      {
+        "pos":5,
+        "charaId":5,
+        "name":"テスト２",
+        "lifePer":98,
+        "skillPer":38
+      },
+      {
+        "pos":6,
+        "charaId":6,
+        "name":"テスト3",
+        "lifePer":70,
+        "skillPer":45
+      }
+    ];
+    return _deckList;
+  },
+
+  getDeckList2: function() {
+    _deckList = [
+      {
+        "pos":1,
+        "charaId":1,
+        "name":"テスト１",
+        "lifePer":80,
+        "skillPer":13
+      },
+      {
+        "pos":2,
+        "charaId":2,
+        "name":"テスト２",
+        "lifePer":65,
+        "skillPer":11
+      },
+      {
+        "pos":3,
+        "charaId":3,
+        "name":"テスト3",
+        "lifePer":40,
+        "skillPer":0
       },
       {
         "pos":4,

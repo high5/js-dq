@@ -103,7 +103,7 @@ var BattleApp = React.createClass({
           <EnemyList  enemyList={this.state.enemyList} />
           <Story />
         </div>
-        <DeckList />
+        <DeckList deckList={this.state.deckList} />
         <Command />
       </div>
     );

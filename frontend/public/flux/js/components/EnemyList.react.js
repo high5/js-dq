@@ -7,13 +7,8 @@ var EnemyList = React.createClass({
 
 
   getInitialState: function() {
-
     console.log("EnemyList getInitialState");
-
-
-
     return {enemyList: this.props.enemyList};
-
   },
 
   componentDidMount: function() {
