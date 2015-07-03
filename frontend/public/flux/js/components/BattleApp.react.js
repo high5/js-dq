@@ -17,7 +17,9 @@ var Command = require('./Command.react');
 
 var BattleStore = require('../stores/BattleStore');
 
-var $ = require('jquery');
+//var $ = require('jquery');
+window.$ = window.jQuery = require('jquery');
+
 var velocity = require('velocity-animate');
 
 function getBattleState() {
@@ -46,6 +48,9 @@ var BattleApp = React.createClass({
 
 
     //velocity(document.body, { opacity: 0.3 });
+
+    //$('body').velocity({ opacity: 0.8 });
+
 
     /*
     request
@@ -78,10 +83,11 @@ var BattleApp = React.createClass({
     */
 
     return getBattleState();
+    //return null;
   },
 
   componentDidMount: function() {
-    //this._onChange();
+    //var data = getBattleState();
   },
 
   componentWillUnmount: function() {
@@ -105,6 +111,7 @@ var BattleApp = React.createClass({
         </div>
         <DeckList deckList={this.state.deckList} />
         <Command />
+
       </div>
     );
   },

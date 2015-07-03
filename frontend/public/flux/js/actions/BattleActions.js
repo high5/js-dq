@@ -3,9 +3,9 @@ var BattleConstants = require('../constants/BattleConstants');
 
 var BattleActions = {
 
-  executeDeckAttack: function() {
+  executeAttack: function() {
     AppDispatcher.dispatch({
-      actionType: BattleConstants.BATTLE_DECK_ATTACK
+      actionType: BattleConstants.BATTLE_ATTACK
     });
   }
 };

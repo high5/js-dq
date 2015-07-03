@@ -18,19 +18,19 @@ var BattleStore = assign({}, EventEmitter.prototype, {
   getEnemyList: function() {
     _enemyList = [
       {
-        "pos":1,
+        "key":1,
         "charaId":3,
         "name":"テスト１",
         "lifePer":65
       },
       {
-        "pos":2,
+        "key":2,
         "charaId":2,
         "name":"テスト２",
         "lifePer":98
       },
       {
-        "pos":3,
+        "key":3,
         "charaId":3,
         "name":"テスト２",
         "lifePer":70
@@ -42,19 +42,19 @@ var BattleStore = assign({}, EventEmitter.prototype, {
   getEnemyList2: function() {
     _enemyList = [
       {
-        "pos":1,
+        "key":1,
         "charaId":3,
         "name":"テスト１",
         "lifePer":65
       },
       {
-        "pos":2,
+        "key":2,
         "charaId":3,
         "name":"テスト２",
         "lifePer":30
       },
       {
-        "pos":3,
+        "key":3,
         "charaId":3,
         "name":"テスト２",
         "lifePer":70
@@ -68,42 +68,42 @@ var BattleStore = assign({}, EventEmitter.prototype, {
   getDeckList: function() {
     _deckList = [
       {
-        "pos":1,
+        "key":1,
         "charaId":1,
         "name":"テスト１",
         "lifePer":65,
         "skillPer":20
       },
       {
-        "pos":2,
+        "key":2,
         "charaId":2,
         "name":"テスト２",
         "lifePer":98,
         "skillPer":38
       },
       {
-        "pos":3,
+        "key":3,
         "charaId":3,
         "name":"テスト3",
         "lifePer":70,
         "skillPer":45
       },
       {
-        "pos":4,
+        "key":4,
         "charaId":4,
         "name":"テスト１",
         "lifePer":65,
         "skillPer":20
       },
       {
-        "pos":5,
+        "key":5,
         "charaId":5,
         "name":"テスト２",
         "lifePer":98,
         "skillPer":38
       },
       {
-        "pos":6,
+        "key":6,
         "charaId":6,
         "name":"テスト3",
         "lifePer":70,
@@ -116,42 +116,42 @@ var BattleStore = assign({}, EventEmitter.prototype, {
   getDeckList2: function() {
     _deckList = [
       {
-        "pos":1,
+        "key":1,
         "charaId":1,
         "name":"テスト１",
         "lifePer":80,
         "skillPer":13
       },
       {
-        "pos":2,
+        "key":2,
         "charaId":2,
         "name":"テスト２",
         "lifePer":65,
         "skillPer":11
       },
       {
-        "pos":3,
+        "key":3,
         "charaId":3,
         "name":"テスト3",
         "lifePer":40,
         "skillPer":0
       },
       {
-        "pos":4,
+        "key":4,
         "charaId":4,
         "name":"テスト１",
         "lifePer":65,
         "skillPer":20
       },
       {
-        "pos":5,
+        "key":5,
         "charaId":5,
         "name":"テスト２",
         "lifePer":98,
         "skillPer":38
       },
       {
-        "pos":6,
+        "key":6,
         "charaId":6,
         "name":"テスト3",
         "lifePer":70,
@@ -187,7 +187,7 @@ AppDispatcher.register(function(action) {
   //var text;
 
   switch(action.actionType) {
-    case BattleConstants.BATTLE_DECK_ATTACK:
+    case BattleConstants.BATTLE_ATTACK:
       BattleStore.emitChange();
       break;
     default:

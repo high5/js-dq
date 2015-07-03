@@ -45,10 +45,25 @@ enemy
     height: 175px;
 }
 
+.enemy-wrap {
+    position: relative;
+}
+
 .enemy-img {
     width: 100px;
     height: 132px;
 }
+
+.enemy-effect-attack-img {
+    position: absolute;
+    display: none;
+    top:0;
+    left:0;
+    z-index: 1011;
+    width: 100px;
+    height: 132px;
+}
+
 
 .enemy-table {
     float:left;

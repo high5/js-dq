@@ -24,7 +24,7 @@ var DeckList = React.createClass({
   render: function() {
 
     var deckList = this.state.deckList.map(function(deck){
-      return <Deck  key={deck.pos} info={deck} />;
+      return <Deck  key={deck.key} info={deck} />;
     });
 
     return (

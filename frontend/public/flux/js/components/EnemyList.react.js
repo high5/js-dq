@@ -31,7 +31,7 @@ var EnemyList = React.createClass({
     */
 
     var enemyList = this.state.enemyList.map(function(enemy){
-      return <Enemy  key={enemy.pos} info={enemy} />;
+      return <Enemy  key={enemy.key} info={enemy} />;
     });
 
     /*
